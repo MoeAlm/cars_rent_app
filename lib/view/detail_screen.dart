@@ -8,7 +8,7 @@ import '../core/components/detail_card_components.dart';
 class DetailScreen extends StatelessWidget {
   final Cars model;
 
-  DetailScreen({super.key, required this.model});
+  const DetailScreen({super.key, required this.model});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +21,7 @@ class DetailScreen extends StatelessWidget {
             onPressed: () {
               Navigator.pop(context);
             },
-            icon: Icon(Icons.arrow_back_ios)),
+            icon: const Icon(Icons.arrow_back_ios)),
       ),
       body: SafeArea(
         child: Column(
@@ -34,7 +34,7 @@ class DetailScreen extends StatelessWidget {
                   width: width,
                   decoration: BoxDecoration(
                     borderRadius:
-                        BorderRadius.vertical(bottom: Radius.circular(30)),
+                        const BorderRadius.vertical(bottom: Radius.circular(30)),
                     color: Colors.grey[300],
                   ),
                   child: Stack(
@@ -74,8 +74,8 @@ class DetailScreen extends StatelessWidget {
                 Row(
                   children: [
                     IconButton(
-                        onPressed: () {}, icon: Icon(Icons.message_rounded)),
-                    IconButton(onPressed: () {}, icon: Icon(Icons.phone)),
+                        onPressed: () {}, icon: const Icon(Icons.message_rounded)),
+                    IconButton(onPressed: () {}, icon: const Icon(Icons.phone)),
                   ],
                 )
               ],
@@ -112,7 +112,7 @@ class DetailScreen extends StatelessWidget {
                     style: OutlinedButton.styleFrom(
                         backgroundColor: Colors.black,
                         foregroundColor: Colors.white),
-                    child: Text('Book Now'),
+                    child: const Text('Book Now'),
                   ),
                 ),
               ],

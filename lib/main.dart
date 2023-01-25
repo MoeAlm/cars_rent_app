@@ -1,4 +1,3 @@
-import 'package:cars_rent_app/view/detail_screen.dart';
 import 'package:cars_rent_app/view/home/home_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Car Rental App',
       theme: ThemeData(useMaterial3: true),
       home: MyHomePage(),
     );

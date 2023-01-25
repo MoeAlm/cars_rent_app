@@ -72,16 +72,16 @@ class MyHomePage extends StatelessWidget {
                     decoration: InputDecoration(
                       filled: true,
                       fillColor: Colors.white,
-                      contentPadding: EdgeInsets.all(14),
+                      contentPadding: const EdgeInsets.all(14),
                       prefixIcon: IconButton(
-                          onPressed: () {}, icon: Icon(Icons.search)),
+                          onPressed: () {}, icon: const Icon(Icons.search)),
                       hintText: 'Search',
                       enabledBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white),
+                        borderSide: const BorderSide(color: Colors.white),
                         borderRadius: BorderRadius.circular(30),
                       ),
                       border: OutlineInputBorder(
-                        borderSide: BorderSide(color: Colors.white),
+                        borderSide: const BorderSide(color: Colors.white),
                         borderRadius: BorderRadius.circular(30),
                       ),
                     ),
@@ -142,7 +142,7 @@ class MyHomePage extends StatelessWidget {
           ],
         ),
       ),
-      endDrawer: Drawer(),
+      endDrawer: const Drawer(),
     );
   }
 }
