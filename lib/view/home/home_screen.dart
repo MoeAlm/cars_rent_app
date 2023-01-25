@@ -58,7 +58,7 @@ class MyHomePage extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: height / 4,
+              height: height / 5,
               decoration: const BoxDecoration(
                 color: Color.fromRGBO(34, 34, 34, 100),
                 borderRadius: BorderRadius.vertical(
@@ -86,15 +86,15 @@ class MyHomePage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  const SizedBox(
-                    height: 15,
+                  SizedBox(
+                    height: height *0.04,
                   ),
                   SizedBox(
                     width: width / 2,
                     child: ElevatedButton(
                       onPressed: () {},
                       style: OutlinedButton.styleFrom(
-                        foregroundColor: Colors.black45,
+                        foregroundColor: Colors.black54,
                         elevation: 0,
                       ),
                       child: buildText(text: 'Show Offers', fontSize: 17),
