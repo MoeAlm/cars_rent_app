@@ -87,7 +87,7 @@ class DetailScreen extends StatelessWidget {
               children: [
                 buildDetailCard(title: 'Transition', subTitle: 'Automatic'),
                 buildDetailCard(
-                    title: 'Acceleration', subTitle: '4.2s 0-150 km/h'),
+                    title: 'Acceleration', subTitle: '14s 0-150 km/h'),
               ],
             ),
             Center(

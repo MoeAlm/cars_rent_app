@@ -118,7 +118,7 @@ class MyHomePage extends StatelessWidget {
                       }),
                 ),
                 buildText(
-                    text: 'Cars', fontSize: 30, fontWeight: FontWeight.bold),
+                    text: 'Available Cars', fontSize: 25, fontWeight: FontWeight.bold),
                 ListView.builder(
                   shrinkWrap: true,
                   physics: const NeverScrollableScrollPhysics(),
