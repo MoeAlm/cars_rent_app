@@ -23,7 +23,10 @@ class DetailScreen extends StatelessWidget {
                 Container(
                   height: height / 2,
                   width: width,
-                  color: Colors.grey[300],
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.vertical(bottom: Radius.circular(30)),
+                    color: Colors.grey[300],
+                  ),
                   child: Stack(
                     children: [
                       Image.asset(
