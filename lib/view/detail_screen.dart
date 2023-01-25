@@ -67,10 +67,9 @@ class DetailScreen extends StatelessWidget {
                 const CircleAvatar(
                   child: Text('U'),
                 ),
-                buildText(text: 'UserName', fontSize: 20, color: Colors.grey)
-                    .px(8),
+                buildText(text: 'User', fontSize: 20, color: Colors.grey).px(8),
                 SizedBox(
-                  width: width / 4.2,
+                  width: width / 2.7,
                 ),
                 Row(
                   children: [
@@ -94,11 +93,17 @@ class DetailScreen extends StatelessWidget {
               child: SizedBox(
                 width: width / 2,
                 child: ElevatedButton(
-                  onPressed: () {},
-                  child: Text('Book Now'),
+                  onPressed: () {
+                    showModalBottomSheet(
+                        context: context,
+                        builder: (context) {
+                          return Container();
+                        });
+                  },
                   style: OutlinedButton.styleFrom(
                       backgroundColor: Colors.black,
                       foregroundColor: Colors.white),
+                  child: Text('Book Now'),
                 ),
               ),
             ).py8()
