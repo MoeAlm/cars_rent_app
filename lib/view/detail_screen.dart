@@ -38,7 +38,7 @@ class DetailScreen extends StatelessWidget {
                       Hero(
                         tag: model.tag,
                         child: Image.asset(
-                          model!.img,
+                          model.img,
                           height: height / 2,
                           width: width,
                         ),
@@ -48,7 +48,7 @@ class DetailScreen extends StatelessWidget {
                 ),
                 Column(
                     children: [
-                      buildText(text: model!.name, fontSize: 25, fontWeight: FontWeight.bold),
+                      buildText(text: model.name, fontSize: 25, fontWeight: FontWeight.bold),
                     ],
                 ).p16()
               ],
