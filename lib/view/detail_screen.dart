@@ -91,14 +91,16 @@ class DetailScreen extends StatelessWidget {
               ],
             ),
             Center(
-                child:
-                    SizedBox(
-                      width: width/2,
-                      child: ElevatedButton(onPressed: () {}, child: Text('Book Now'), style: OutlinedButton.styleFrom(
-                        backgroundColor: Colors.black,
-                        foregroundColor: Colors.white
-                      ),),
-                    ),
+              child: SizedBox(
+                width: width / 2,
+                child: ElevatedButton(
+                  onPressed: () {},
+                  child: Text('Book Now'),
+                  style: OutlinedButton.styleFrom(
+                      backgroundColor: Colors.black,
+                      foregroundColor: Colors.white),
+                ),
+              ),
             ).py8()
           ],
         ),
