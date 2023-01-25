@@ -13,11 +13,14 @@ Widget buildCarItems(BuildContext context, {required Cars model}) {
           children: [
             Padding(
               padding: const EdgeInsets.symmetric(horizontal: 15.0),
-              child: Image.asset(
-                model.img,
-                height: MediaQuery.of(context).size.height / 6,
-                width: MediaQuery.of(context).size.width / 2.4,
-                // fit: BoxFit.cover,
+              child: Hero(
+                tag: model.tag,
+                child: Image.asset(
+                  model.img,
+                  height: MediaQuery.of(context).size.height / 6,
+                  width: MediaQuery.of(context).size.width / 2.4,
+                  // fit: BoxFit.cover,
+                ),
               ),
             ),
             Column(

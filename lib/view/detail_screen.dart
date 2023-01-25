@@ -1,3 +1,4 @@
+import 'package:cars_rent_app/core/base/models/cars_model.dart';
 import 'package:cars_rent_app/core/components/text_components.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
@@ -5,8 +6,9 @@ import 'package:velocity_x/velocity_x.dart';
 import '../core/components/detail_card_components.dart';
 
 class DetailScreen extends StatelessWidget {
-  const DetailScreen({Key? key}) : super(key: key);
+  final Cars model;
 
+  DetailScreen({super.key, required this.model});
   @override
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
@@ -14,7 +16,9 @@ class DetailScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.grey[300],
-        leading: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_back_ios)),
+        leading: IconButton(onPressed: (){
+          Navigator.pop(context);
+        }, icon: Icon(Icons.arrow_back_ios)),
       ),
       body: SafeArea(
         child: Column(
@@ -31,17 +35,20 @@ class DetailScreen extends StatelessWidget {
                   ),
                   child: Stack(
                     children: [
-                      Image.asset(
-                        'assets/image/cars/1.png',
-                        height: height / 2,
-                        width: width,
+                      Hero(
+                        tag: model.tag,
+                        child: Image.asset(
+                          model!.img,
+                          height: height / 2,
+                          width: width,
+                        ),
                       )
                     ],
                   ),
                 ),
                 Column(
                     children: [
-                      buildText(text: 'Toyota', fontSize: 25, fontWeight: FontWeight.bold),
+                      buildText(text: model!.name, fontSize: 25, fontWeight: FontWeight.bold),
                     ],
                 ).p16()
               ],

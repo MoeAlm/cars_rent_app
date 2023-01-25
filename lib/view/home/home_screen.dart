@@ -6,6 +6,7 @@ import '../../core/base/models/cars_model.dart';
 import '../../core/components/appBar.dart';
 import '../../core/components/brand_components.dart';
 import '../../core/components/cars_components.dart';
+import '../detail_screen.dart';
 import '../profile_screen.dart';
 
 class MyHomePage extends StatelessWidget {
@@ -25,30 +26,24 @@ class MyHomePage extends StatelessWidget {
       Brands(img: 'assets/image/logos/5.png'),
     ];
     List<Cars> carsList = [
-      Cars(
-        img: 'assets/image/cars/1.png',
-        name: 'Toyota',
-      ),
+      Cars(img: 'assets/image/cars/1.png', name: 'Toyota', tag: 'Toyota'),
       Cars(
         img: 'assets/image/cars/2.png',
         name: 'Hyundai',
+        tag: 'Hyundai',
       ),
       Cars(
         img: 'assets/image/cars/3.png',
         name: 'Toyota',
+        tag: 'Toyota1',
       ),
       Cars(
         img: 'assets/image/cars/4.png',
         name: 'Audi',
+        tag: 'Audi',
       ),
-      Cars(
-        img: 'assets/image/cars/5.png',
-        name: 'Tesla',
-      ),
-      Cars(
-        img: 'assets/image/cars/6.png',
-        name: 'KIA',
-      ),
+      Cars(img: 'assets/image/cars/5.png', name: 'Tesla', tag: 'Tesla'),
+      Cars(img: 'assets/image/cars/6.png', name: 'KIA', tag: 'KIA'),
     ];
     return Scaffold(
       key: _key,
@@ -130,7 +125,16 @@ class MyHomePage extends StatelessWidget {
                   // scrollDirection: Axis.horizontal,
                   itemCount: carsList.length,
                   itemBuilder: (context, index) {
-                    return buildCarItems(context, model: carsList[index]);
+                    return InkWell(
+                        onTap: () {
+                          Navigator.push(context,
+                              MaterialPageRoute(builder: (context) {
+                            return DetailScreen(
+                              model: carsList[index],
+                            );
+                          }));
+                        },
+                        child: buildCarItems(context, model: carsList[index]));
                   },
                 ),
               ],
