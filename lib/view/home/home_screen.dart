@@ -95,7 +95,7 @@ class MyHomePage extends StatelessWidget {
                     height: 15,
                   ),
                   SizedBox(
-                    width: MediaQuery.of(context).size.width / 2,
+                    width: width / 2,
                     child: ElevatedButton(
                       onPressed: () {},
                       style: OutlinedButton.styleFrom(

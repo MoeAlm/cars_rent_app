@@ -1,3 +1,4 @@
+import 'package:cars_rent_app/view/detail_screen.dart';
 import 'package:cars_rent_app/view/home/home_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -14,7 +15,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(useMaterial3: true),
-      home: MyHomePage(),
+      home: DetailScreen(),
     );
   }
 }
