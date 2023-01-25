@@ -1,9 +1,6 @@
-
 import 'package:cars_rent_app/core/components/text_components.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
-
-import '../../view/profile_screen.dart';
 
 AppBar buildAppbar({required Function() onTap, required Function() onPressed}){
   return AppBar(
@@ -24,7 +21,7 @@ AppBar buildAppbar({required Function() onTap, required Function() onPressed}){
     ),
     elevation: 0.0,
     actions: [
-      IconButton(onPressed: onTap, icon: Image.asset('assets/icon/menu_bar.png'))
+      IconButton(onPressed: onTap, icon: Image.asset('assets/icon/menu_bar.png', color: Colors.white,))
     ],
   );
 }

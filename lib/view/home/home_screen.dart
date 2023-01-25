@@ -3,7 +3,7 @@ import 'package:cars_rent_app/core/components/text_components.dart';
 import 'package:flutter/material.dart';
 import 'package:velocity_x/velocity_x.dart';
 import '../../core/base/models/cars_model.dart';
-import '../../core/components/appBar.dart';
+import '../../core/components/appbar.dart';
 import '../../core/components/brand_components.dart';
 import '../../core/components/cars_components.dart';
 import '../detail_screen.dart';
