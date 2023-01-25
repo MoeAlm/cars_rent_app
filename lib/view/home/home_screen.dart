@@ -11,6 +11,8 @@ import '../profile_screen.dart';
 class MyHomePage extends StatelessWidget {
   final GlobalKey<ScaffoldState> _key = GlobalKey<ScaffoldState>();
 
+  MyHomePage({super.key});
+
   @override
   Widget build(BuildContext context) {
     double? height = MediaQuery.of(context).size.height;
@@ -111,7 +113,7 @@ class MyHomePage extends StatelessWidget {
               children: [
                 buildText(
                     text: 'Brands', fontSize: 30, fontWeight: FontWeight.bold),
-                Container(
+                SizedBox(
                   height: height / 10,
                   child: ListView.builder(
                       scrollDirection: Axis.horizontal,
@@ -124,7 +126,7 @@ class MyHomePage extends StatelessWidget {
                     text: 'Cars', fontSize: 30, fontWeight: FontWeight.bold),
                 ListView.builder(
                   shrinkWrap: true,
-                  physics: NeverScrollableScrollPhysics(),
+                  physics: const NeverScrollableScrollPhysics(),
                   // scrollDirection: Axis.horizontal,
                   itemCount: carsList.length,
                   itemBuilder: (context, index) {
