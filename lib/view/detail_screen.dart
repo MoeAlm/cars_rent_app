@@ -54,28 +54,28 @@ class DetailScreen extends StatelessWidget {
                   children: [
                     buildText(
                         text: model.name,
-                        fontSize: 25,
+                        fontSize: width * 0.07,
                         fontWeight: FontWeight.bold),
                   ],
                 ).p16()
               ],
             ),
-            buildText(text: 'Renter', fontSize: 25, fontWeight: FontWeight.bold)
+            buildText(text: 'Renter', fontSize: width * 0.07, fontWeight: FontWeight.bold)
                 .px16().py8(),
             Row(
               children: [
                 const CircleAvatar(
                   child: Text('U'),
                 ),
-                buildText(text: 'User', fontSize: 20, color: Colors.grey).px(8),
+                buildText(text: 'User', fontSize: width * 0.06, color: Colors.grey).px(8),
                 SizedBox(
                   width: width / 2.7,
                 ),
                 Row(
                   children: [
                     IconButton(
-                        onPressed: () {}, icon: const Icon(Icons.message_rounded)),
-                    IconButton(onPressed: () {}, icon: const Icon(Icons.phone)),
+                        onPressed: () {}, icon: Icon(Icons.message_rounded, size: width *0.075,)),
+                    IconButton(onPressed: () {}, icon: Icon(Icons.phone, size: width *0.075,)),
                   ],
                 )
               ],
@@ -97,8 +97,8 @@ class DetailScreen extends StatelessWidget {
             ),
             Row(
               children: [
-                buildText(text: '124\$', fontSize: 25, fontWeight: FontWeight.bold),
-                Expanded(child: buildText(text: ' / Day', fontSize: 15, color: Colors.grey)),
+                buildText(text: '124\$', fontSize: width * 0.09, fontWeight: FontWeight.bold),
+                Expanded(child: buildText(text: ' / Day', fontSize: width* 0.05, color: Colors.grey)),
                 Expanded(
                   flex: 3,
                   child: ElevatedButton(
@@ -112,7 +112,7 @@ class DetailScreen extends StatelessWidget {
                     style: OutlinedButton.styleFrom(
                         backgroundColor: Colors.black,
                         foregroundColor: Colors.white),
-                    child: const Text('Book Now'),
+                    child: Text('Book Now', style: TextStyle(fontSize: width * 0.045),),
                   ),
                 ),
               ],
