@@ -61,7 +61,7 @@ class DetailScreen extends StatelessWidget {
               ],
             ),
             buildText(text: 'Renter', fontSize: 25, fontWeight: FontWeight.bold)
-                .p16(),
+                .px16().py8(),
             Row(
               children: [
                 const CircleAvatar(
@@ -80,6 +80,9 @@ class DetailScreen extends StatelessWidget {
                 )
               ],
             ).px16(),
+            SizedBox(
+              height: height/32,
+            ),
             Row(
               // mainAxisAlignment: MainAxisAlignment.start,
               // crossAxisAlignment: CrossAxisAlignment.start,
@@ -89,24 +92,31 @@ class DetailScreen extends StatelessWidget {
                     title: 'Acceleration', subTitle: '14s 0-150 km/h'),
               ],
             ),
-            Center(
-              child: SizedBox(
-                width: width / 2,
-                child: ElevatedButton(
-                  onPressed: () {
-                    showModalBottomSheet(
-                        context: context,
-                        builder: (context) {
-                          return Container();
-                        });
-                  },
-                  style: OutlinedButton.styleFrom(
-                      backgroundColor: Colors.black,
-                      foregroundColor: Colors.white),
-                  child: Text('Book Now'),
+            SizedBox(
+              height: height/20,
+            ),
+            Row(
+              children: [
+                buildText(text: '124\$', fontSize: 25, fontWeight: FontWeight.bold),
+                Expanded(child: buildText(text: ' / Day', fontSize: 15, color: Colors.grey)),
+                Expanded(
+                  flex: 3,
+                  child: ElevatedButton(
+                    onPressed: () {
+                      showModalBottomSheet(
+                          context: context,
+                          builder: (context) {
+                            return Container();
+                          });
+                    },
+                    style: OutlinedButton.styleFrom(
+                        backgroundColor: Colors.black,
+                        foregroundColor: Colors.white),
+                    child: Text('Book Now'),
+                  ),
                 ),
-              ),
-            ).py8()
+              ],
+            ).p16(),
           ],
         ),
       ),
